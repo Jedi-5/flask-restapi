@@ -8,6 +8,10 @@ jobs:
       - image: cimg/python:3.10.2
     steps:
       - checkout
+      - run: | # this job exits if the branch matches a string
+          if [ "$CIRCLE_BRANCH" == 'feature' ]; then
+            exit 1
+          fi
       - python/install-packages:
           pkg-manager: pip
 

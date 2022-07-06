@@ -24,6 +24,7 @@ workflows:
             branches:
               only:
                 - main
+
            #     - release
            #     - /xyz.*/ ## Regex
 
